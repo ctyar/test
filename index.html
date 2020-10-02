@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Test</h1>
+
+ <script>
+async function Run(){
+	await fetch("https://stagingapi.whynot.earth/api/v0/authentication/ping", {
+	    "credentials": "include",
+	    "headers": {
+	        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0",
+	        "Accept": "application/json, text/plain, */*",
+	        "Accept-Language": "en-US,en;q=0.5",
+	        "Pragma": "no-cache",
+	        "Cache-Control": "no-cache"
+	    },
+	    "referrer": "https://staging.foodouken.com/settings/account",
+	    "method": "GET",
+	    "mode": "cors"
+	})
+	.then(response => response.json())
+	.then(data => console.log(data));
+}
+
+Run();
+</script> 
+</body>
+</html>
